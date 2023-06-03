@@ -31,7 +31,7 @@ const unsigned int Sbus::sbus2pwm( const unsigned int& sbus )
 
 }
 
-const bool Sbus::decodeChannels(){
+void Sbus::decodeChannels(){
 
 	//if ((buffer[23] >> 2) & 0x0001) {
 	//	lost++;
@@ -64,44 +64,43 @@ const bool Sbus::decodeChannels(){
 		failsafe = false;
 	}
 
-	return true;
+}
+
+void Sbus::readSbusFrame()
+{
+	if ( buffer[0] == START_BYTE && buffer[SBUS_FRAME_LEN-1] == END_BYTE ) {
+		decodeChannels();
+		synced=true;
+	} else {
+		synced=false;
+		lost++;
+	}
 
 }
 
-void Sbus::readSbusFrame( const unsigned char& byte )
+void Sbus::findSync( const unsigned char& byte )
 {
 	if ( !reading && byte == START_BYTE ) {
 		reading=true;
 		i_buf=0;
 	}
 
-	if ( reading )
-	{
-
-		if( i_buf < SBUS_FRAME_LEN ) {
-			buffer[i_buf] = byte;
-
-			if ( byte == END_BYTE && i_buf == SBUS_FRAME_LEN - 1 ) {
-				if ( !decodeChannels() ) lost++;
-				reading=false;
-			}
+	if ( reading ){
 
 
-		} else {
+		if ( byte == END_BYTE && i_buf == SBUS_FRAME_LEN - 1 ) {
+			synced=true;
 			reading=false;
-			lost ++;
 		}
 
-		i_buf ++;
+		i_buf++;
 	}
-
-
-
 }
 
 
-void Sbus::incrementUsartError(){
-	usartErr++;
+const bool Sbus::isSynced()
+{
+	return synced;
 }
 
 

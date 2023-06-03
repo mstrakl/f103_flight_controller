@@ -3,6 +3,7 @@ sbus.cpp:12:1:def::Sbus::Sbus()	1
 sbus.cpp:18:1:def::Sbus::~Sbus()	1
 sbus.cpp:18:1:virtual def::Sbus::~Sbus()	1
 sbus.cpp:23:20:const unsigned int def::Sbus::sbus2pwm(const unsigned int&)	1
-sbus.cpp:34:12:const bool def::Sbus::decodeChannels()	4
-sbus.cpp:71:6:void def::Sbus::readSbusFrame(const unsigned char&)	8
-sbus.cpp:103:6:void def::Sbus::incrementUsartError()	1
+sbus.cpp:34:6:void def::Sbus::decodeChannels()	4
+sbus.cpp:69:6:void def::Sbus::readSbusFrame()	3
+sbus.cpp:81:6:void def::Sbus::findSync(const unsigned char&)	6
+sbus.cpp:101:12:const bool def::Sbus::isSynced()	1

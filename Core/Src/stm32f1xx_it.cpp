@@ -223,6 +223,34 @@ void DMA1_Channel5_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel5_IRQn 0 */
 
+	if (LL_DMA_IsEnabledIT_TC(DMA1, LL_DMA_CHANNEL_5) && LL_DMA_IsActiveFlag_TC5(DMA1)) {
+
+		LL_DMA_ClearFlag_TC5(DMA1);
+
+
+		// Read sbus channels
+		G.Sbus.readSbusFrame();
+
+		if ( ! G.Sbus.isSynced() ) {
+
+			// Disable DMA Ring buffer reading
+			// - get re-eanbled later, when sync
+			//   is found by the rxne byte checking
+			//
+			LL_DMA_DisableChannel(DMA1, LL_DMA_CHANNEL_5);
+
+
+			// Enable USART1 RXNE to start
+			// checking for sync
+			//
+			LL_USART_EnableIT_RXNE(USART1);
+		}
+
+
+	} else if ( LL_DMA_IsActiveFlag_TE5(DMA1) ) {
+		__NOP();
+	}
+
   /* USER CODE END DMA1_Channel5_IRQn 0 */
 
   /* USER CODE BEGIN DMA1_Channel5_IRQn 1 */
@@ -251,18 +279,62 @@ void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
 
-	if( LL_USART_IsActiveFlag_RXNE(USART1) ) {
+	if (LL_USART_IsEnabledIT_RXNE(USART1) && LL_USART_IsActiveFlag_RXNE(USART1) ) {
 
-		USART1_ReadSbus_Callback();
+		LL_USART_ClearFlag_RXNE(USART1);
 
-	} else if ( 	LL_USART_IsActiveFlag_ORE(USART1)
-				|| 	LL_USART_IsActiveFlag_NE(USART1)
-				|| 	LL_USART_IsActiveFlag_PE(USART1)
-				|| 	LL_USART_IsActiveFlag_LBD(USART1)  ) {
+		if ( ! G.Sbus.isSynced() ) {
 
-		USART1_Error_Callback();
+			// Try finding sync
+			G.Sbus.findSync( LL_USART_ReceiveData8(USART1) );
 
+		} else {
+
+			// Enable DMA Ring buffer reading
+			//
+			LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_5);
+
+
+			// Disable checking for sync
+			// - gets re enabled by DMA IRQ if
+			// 	 there are errors reading usart
+			//
+			LL_USART_DisableIT_RXNE(USART1);
+		}
 	}
+
+
+
+//    if (LL_USART_IsEnabledIT_IDLE(USART1) && LL_USART_IsActiveFlag_IDLE(USART1)) {
+//
+//
+//        LL_USART_ClearFlag_IDLE(USART1);
+//
+//        // Enable DMA Channel only after IDLE
+//        // to ensure that first byte in START_BYTE
+//        //
+//        if ( ! LL_DMA_IsEnabledChannel(DMA1, LL_DMA_CHANNEL_5) ) {
+//        	LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_5);
+//        	LL_DMA_EnableIT_TC(DMA1, LL_DMA_CHANNEL_5);
+//        }
+//
+//    }
+//
+//
+//	if( LL_USART_IsActiveFlag_RXNE(USART1) ) {
+//
+//		//USART1_ReadSbus_Callback();
+//
+//	} else if ( 	LL_USART_IsActiveFlag_ORE(USART1)
+//				|| 	LL_USART_IsActiveFlag_NE(USART1)
+//				|| 	LL_USART_IsActiveFlag_PE(USART1)
+//				|| 	LL_USART_IsActiveFlag_LBD(USART1)  ) {
+//
+//		//USART1_Error_Callback();
+//
+//	}
+//
+
 
   /* USER CODE END USART1_IRQn 0 */
   /* USER CODE BEGIN USART1_IRQn 1 */
