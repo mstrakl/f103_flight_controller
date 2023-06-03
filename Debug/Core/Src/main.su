@@ -17,13 +17,22 @@
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:761:22:void LL_APB2_GRP1_EnableClock(uint32_t)	24	static
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h:471:22:void LL_FLASH_SetLatency(uint32_t)	16	static
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h:484:26:uint32_t LL_FLASH_GetLatency()	4	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:861:22:void LL_GPIO_TogglePin(GPIO_TypeDef*, uint32_t)	24	static
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:1562:22:void LL_GPIO_AF_Remap_SWJ_NOJTAG()	4	static
-../Core/Inc/globals.h:13:7:Globals::Globals()	16	static
-../Core/Src/main.cpp:69:5:int main()	8	static
-../Core/Src/main.cpp:135:6:void SystemClock_Config()	8	static
-../Core/Src/main.cpp:172:6:void IncrementSystemTick_Callback()	4	static,ignoring_inline_asm
-../Core/Src/main.cpp:183:6:void Error_Handler()	4	static,ignoring_inline_asm
-../Core/Inc/globals.h:13:7:Globals::~Globals()	16	static
-../Core/Src/main.cpp:192:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/main.cpp:192:1:cpp)	8	static
-../Core/Src/main.cpp:192:1:cpp)	8	static
+../Core/Inc/globals.h:17:3:events::Event8::Event8(const unsigned char&)	16	static
+../Core/Inc/globals.h:20:8:void events::Event8::tick()	16	static
+../Core/Inc/globals.h:28:8:void events::Event8::clear()	16	static
+../Core/Inc/globals.h:33:14:const bool events::Event8::flag()	16	static
+../Core/Inc/globals.h:48:3:events::Event16::Event16(const unsigned int&)	16	static
+../Core/Inc/globals.h:51:8:void events::Event16::tick()	16	static
+../Core/Inc/globals.h:59:8:void events::Event16::clear()	16	static
+../Core/Inc/globals.h:64:14:const bool events::Event16::flag()	16	static
+../Core/Inc/globals.h:78:7:Globals::Globals()	24	static
+../Core/Src/main.cpp:68:5:int main()	8	static
+../Core/Src/main.cpp:155:6:void SystemClock_Config()	8	static
+../Core/Src/main.cpp:192:6:void IncrementSystemTick_Callback()	8	static
+../Core/Src/main.cpp:209:6:void Error_Handler()	4	static,ignoring_inline_asm
+../Core/Inc/globals.h:78:7:Globals::~Globals()	16	static
+../Core/Src/main.cpp:218:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/main.cpp:218:1:cpp)	8	static
+../Core/Src/main.cpp:218:1:cpp)	8	static

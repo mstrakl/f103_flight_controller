@@ -1,4 +1,4 @@
-Core/Src/i2c.o: ../Core/Src/i2c.c ../Core/Inc/i2c.h ../Core/Inc/main.h \
+Core/Src/i2c.o: ../Core/Src/i2c.cpp ../Core/Inc/i2c.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \

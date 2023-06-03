@@ -47,7 +47,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint32_t lastTicks=0;
 
 /* USER CODE END PV */
 
@@ -106,13 +105,9 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   //MX_USART3_UART_Init();
-  //MX_I2C1_Init();
+  MX_I2C1_Init();
 
   /* USER CODE BEGIN 2 */
-
-  //LL_USART_EnableIT_RXNE(USART1);
-  //LL_USART_EnableIT_ERROR(USART1);
-
 
 
   /* USER CODE END 2 */
@@ -121,6 +116,31 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
+	// Event 10ms:
+	if ( G.time10.flag() ) {
+
+
+		G.time10.clear();
+	}
+
+	// Event 100ms:
+	if ( G.time100.flag() ) {
+
+		LL_GPIO_TogglePin( GPIOC, LL_GPIO_PIN_13 );
+
+		G.time100.clear();
+	}
+
+	// Event 1000ms:
+	if ( G.time1000.flag() ) {
+
+		G.time1000.clear();
+	}
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -170,8 +190,14 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 void IncrementSystemTick_Callback(void){
+
+	G.time10.tick();
+	G.time100.tick();
+	G.time1000.tick();
+
+	// Event 1ms:
 	G.millis++;
-	__NOP();
+
 }
 
 /* USER CODE END 4 */

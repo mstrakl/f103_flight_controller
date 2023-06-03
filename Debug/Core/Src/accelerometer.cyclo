@@ -1,0 +1,3 @@
+accelerometer.cpp:10:1:Accelerometer::Accelerometer()	1
+accelerometer.cpp:15:1:Accelerometer::~Accelerometer()	1
+accelerometer.cpp:15:1:virtual Accelerometer::~Accelerometer()	1

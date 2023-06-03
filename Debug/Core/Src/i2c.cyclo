@@ -1,11 +1,11 @@
-core_cm3.h:1499:26:__NVIC_GetPriorityGrouping	1
-core_cm3.h:1511:22:__NVIC_EnableIRQ	2
-core_cm3.h:1639:22:__NVIC_SetPriority	2
-core_cm3.h:1686:26:NVIC_EncodePriority	2
-stm32f1xx_ll_i2c.h:460:22:LL_I2C_EnableClockStretching	1
-stm32f1xx_ll_i2c.h:507:22:LL_I2C_DisableGeneralCall	1
-stm32f1xx_ll_i2c.h:549:22:LL_I2C_SetOwnAddress2	1
-stm32f1xx_ll_i2c.h:571:22:LL_I2C_DisableOwnAddress2	1
-stm32f1xx_ll_bus.h:445:22:LL_APB1_GRP1_EnableClock	1
-stm32f1xx_ll_bus.h:761:22:LL_APB2_GRP1_EnableClock	1
-i2c.c:28:6:MX_I2C1_Init	1
+core_cm3.h:1499:26:uint32_t __NVIC_GetPriorityGrouping()	1
+core_cm3.h:1511:22:void __NVIC_EnableIRQ(IRQn_Type)	2
+core_cm3.h:1639:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	2
+core_cm3.h:1686:26:uint32_t NVIC_EncodePriority(uint32_t, uint32_t, uint32_t)	2
+stm32f1xx_ll_i2c.h:460:22:void LL_I2C_EnableClockStretching(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:507:22:void LL_I2C_DisableGeneralCall(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:549:22:void LL_I2C_SetOwnAddress2(I2C_TypeDef*, uint32_t)	1
+stm32f1xx_ll_i2c.h:571:22:void LL_I2C_DisableOwnAddress2(I2C_TypeDef*)	1
+stm32f1xx_ll_bus.h:445:22:void LL_APB1_GRP1_EnableClock(uint32_t)	1
+stm32f1xx_ll_bus.h:761:22:void LL_APB2_GRP1_EnableClock(uint32_t)	1
+i2c.cpp:28:6:void MX_I2C1_Init()	1

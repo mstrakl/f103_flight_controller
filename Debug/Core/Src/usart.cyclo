@@ -21,10 +21,12 @@ stm32f1xx_ll_usart.h:1527:22:void LL_USART_ConfigAsyncMode(USART_TypeDef*)	1
 stm32f1xx_ll_usart.h:2083:22:void LL_USART_EnableIT_RXNE(USART_TypeDef*)	2
 stm32f1xx_ll_usart.h:2364:22:void LL_USART_EnableDMAReq_RX(USART_TypeDef*)	2
 stm32f1xx_ll_usart.h:2431:26:uint32_t LL_USART_DMA_GetRegAddr(const USART_TypeDef*)	1
-globals.h:13:7:Globals::Globals()	1
+globals.h:17:3:events::Event8::Event8(const unsigned char&)	1
+globals.h:48:3:events::Event16::Event16(const unsigned int&)	1
+globals.h:78:7:Globals::Globals()	1
 usart.cpp:31:6:void MX_USART1_UART_Init()	1
 usart.cpp:126:6:void MX_USART3_UART_Init()	1
-globals.h:13:7:Globals::~Globals()	1
+globals.h:78:7:Globals::~Globals()	1
 usart.cpp:189:1:void __static_initialization_and_destruction_0(int, int)	7
 usart.cpp:189:1:cpp)	1
 usart.cpp:189:1:cpp)	1

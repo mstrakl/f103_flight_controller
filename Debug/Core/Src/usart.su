@@ -21,10 +21,12 @@
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:2083:22:void LL_USART_EnableIT_RXNE(USART_TypeDef*)	40	static,ignoring_inline_asm
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:2364:22:void LL_USART_EnableDMAReq_RX(USART_TypeDef*)	40	static,ignoring_inline_asm
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:2431:26:uint32_t LL_USART_DMA_GetRegAddr(const USART_TypeDef*)	16	static
-../Core/Inc/globals.h:13:7:Globals::Globals()	16	static
+../Core/Inc/globals.h:17:3:events::Event8::Event8(const unsigned char&)	16	static
+../Core/Inc/globals.h:48:3:events::Event16::Event16(const unsigned int&)	16	static
+../Core/Inc/globals.h:78:7:Globals::Globals()	24	static
 ../Core/Src/usart.cpp:31:6:void MX_USART1_UART_Init()	56	static
 ../Core/Src/usart.cpp:126:6:void MX_USART3_UART_Init()	56	static
-../Core/Inc/globals.h:13:7:Globals::~Globals()	16	static
+../Core/Inc/globals.h:78:7:Globals::~Globals()	16	static
 ../Core/Src/usart.cpp:189:1:void __static_initialization_and_destruction_0(int, int)	16	static
 ../Core/Src/usart.cpp:189:1:cpp)	8	static
 ../Core/Src/usart.cpp:189:1:cpp)	8	static

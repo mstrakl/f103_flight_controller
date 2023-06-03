@@ -17,13 +17,22 @@ stm32f1xx_ll_bus.h:445:22:void LL_APB1_GRP1_EnableClock(uint32_t)	1
 stm32f1xx_ll_bus.h:761:22:void LL_APB2_GRP1_EnableClock(uint32_t)	1
 stm32f1xx_ll_system.h:471:22:void LL_FLASH_SetLatency(uint32_t)	1
 stm32f1xx_ll_system.h:484:26:uint32_t LL_FLASH_GetLatency()	1
+stm32f1xx_ll_gpio.h:861:22:void LL_GPIO_TogglePin(GPIO_TypeDef*, uint32_t)	1
 stm32f1xx_ll_gpio.h:1562:22:void LL_GPIO_AF_Remap_SWJ_NOJTAG()	1
-globals.h:13:7:Globals::Globals()	1
-main.cpp:69:5:int main()	1
-main.cpp:135:6:void SystemClock_Config()	5
-main.cpp:172:6:void IncrementSystemTick_Callback()	1
-main.cpp:183:6:void Error_Handler()	1
-globals.h:13:7:Globals::~Globals()	1
-main.cpp:192:1:void __static_initialization_and_destruction_0(int, int)	7
-main.cpp:192:1:cpp)	1
-main.cpp:192:1:cpp)	1
+globals.h:17:3:events::Event8::Event8(const unsigned char&)	1
+globals.h:20:8:void events::Event8::tick()	2
+globals.h:28:8:void events::Event8::clear()	1
+globals.h:33:14:const bool events::Event8::flag()	1
+globals.h:48:3:events::Event16::Event16(const unsigned int&)	1
+globals.h:51:8:void events::Event16::tick()	2
+globals.h:59:8:void events::Event16::clear()	1
+globals.h:64:14:const bool events::Event16::flag()	1
+globals.h:78:7:Globals::Globals()	1
+main.cpp:68:5:int main()	4
+main.cpp:155:6:void SystemClock_Config()	5
+main.cpp:192:6:void IncrementSystemTick_Callback()	1
+main.cpp:209:6:void Error_Handler()	1
+globals.h:78:7:Globals::~Globals()	1
+main.cpp:218:1:void __static_initialization_and_destruction_0(int, int)	7
+main.cpp:218:1:cpp)	1
+main.cpp:218:1:cpp)	1

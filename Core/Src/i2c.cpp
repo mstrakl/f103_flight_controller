@@ -51,7 +51,7 @@ void MX_I2C1_Init(void)
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_I2C1);
 
   /* I2C1 interrupt Init */
-  NVIC_SetPriority(I2C1_EV_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_SetPriority(I2C1_EV_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
   NVIC_EnableIRQ(I2C1_EV_IRQn);
 
   /* USER CODE BEGIN I2C1_Init 1 */
