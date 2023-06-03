@@ -39,7 +39,8 @@ extern "C" {
 void MX_I2C1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void I2C_ErrataWorkaround();
+void I2C_WriteByte(unsigned char addr, unsigned char data);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

@@ -2,10 +2,28 @@ core_cm3.h:1499:26:uint32_t __NVIC_GetPriorityGrouping()	1
 core_cm3.h:1511:22:void __NVIC_EnableIRQ(IRQn_Type)	2
 core_cm3.h:1639:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	2
 core_cm3.h:1686:26:uint32_t NVIC_EncodePriority(uint32_t, uint32_t, uint32_t)	2
+stm32f1xx_ll_i2c.h:348:22:void LL_I2C_Enable(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:359:22:void LL_I2C_Disable(I2C_TypeDef*)	1
 stm32f1xx_ll_i2c.h:460:22:void LL_I2C_EnableClockStretching(I2C_TypeDef*)	1
 stm32f1xx_ll_i2c.h:507:22:void LL_I2C_DisableGeneralCall(I2C_TypeDef*)	1
 stm32f1xx_ll_i2c.h:549:22:void LL_I2C_SetOwnAddress2(I2C_TypeDef*, uint32_t)	1
 stm32f1xx_ll_i2c.h:571:22:void LL_I2C_DisableOwnAddress2(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1128:26:uint32_t LL_I2C_IsActiveFlag_TXE(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1180:26:uint32_t LL_I2C_IsActiveFlag_ADDR(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1310:26:uint32_t LL_I2C_IsActiveFlag_BUSY(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1382:26:uint32_t LL_I2C_IsActiveFlag_MSL(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1395:22:void LL_I2C_ClearFlag_ADDR(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1516:22:void LL_I2C_EnableReset(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1527:22:void LL_I2C_DisableReset(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1566:22:void LL_I2C_GenerateStartCondition(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1577:22:void LL_I2C_GenerateStopCondition(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1740:22:void LL_I2C_TransmitData8(I2C_TypeDef*, uint8_t)	1
 stm32f1xx_ll_bus.h:445:22:void LL_APB1_GRP1_EnableClock(uint32_t)	1
 stm32f1xx_ll_bus.h:761:22:void LL_APB2_GRP1_EnableClock(uint32_t)	1
+stm32f1xx_ll_gpio.h:341:22:void LL_GPIO_SetPinMode(GPIO_TypeDef*, uint32_t, uint32_t)	1
+stm32f1xx_ll_gpio.h:493:22:void LL_GPIO_SetPinOutputType(GPIO_TypeDef*, uint32_t, uint32_t)	1
+stm32f1xx_ll_gpio.h:564:22:void LL_GPIO_SetPinPull(GPIO_TypeDef*, uint32_t, uint32_t)	1
+stm32f1xx_ll_gpio.h:595:26:uint32_t LL_GPIO_GetPinPull(GPIO_TypeDef*, uint32_t)	1
 i2c.cpp:28:6:void MX_I2C1_Init()	1
+i2c.cpp:92:6:void I2C_ErrataWorkaround()	1
+i2c.cpp:149:6:void I2C_WriteByte(unsigned char, unsigned char)	6

@@ -119,6 +119,7 @@ int main(void)
 
 
 	// Event 10ms:
+	//
 	if ( G.time10.flag() ) {
 
 
@@ -126,7 +127,53 @@ int main(void)
 	}
 
 	// Event 100ms:
+	//
 	if ( G.time100.flag() ) {
+
+		// I2C Protocol
+		// 1. Master sends 1st byte
+		//  - first 7 bits are slave device addr
+		//  - 8th bit is read=1/write=0 flag
+		//
+		// 2. Slave responds with ACK bit (0=ACK)
+
+		#define MPU6050_ADDR 0xD0
+
+		#define SMPLRT_DIV_REG 0x19
+		#define GYRO_CONFIG_REG 0x1B
+		#define ACCEL_CONFIG_REG 0x1C
+		#define ACCEL_XOUT_H_REG 0x3B
+		#define TEMP_OUT_H_REG 0x41
+		#define GYRO_XOUT_H_REG 0x43
+		#define PWR_MGMT_1_REG 0x6B
+		#define WHO_AM_I_REG 0x75
+
+		uint32_t k=0;
+	    while( LL_I2C_IsActiveFlag_BUSY(I2C1) )
+	    {
+	    	if ( k > 100000 ){
+	    		I2C_ErrataWorkaround();
+	    		break;
+	    	}
+	    	k++;
+	    }
+
+	    // EV5
+	    LL_I2C_GenerateStartCondition(I2C1);
+
+	    k=0;
+	    while(!LL_I2C_IsActiveFlag_MSL(I2C1))
+	    {
+	    	if ( k > 100000 ){
+	    		break;
+	    	}
+	    	k++;
+	    }
+
+
+		LL_I2C_TransmitData8(I2C1, MPU6050_ADDR);
+
+
 
 		LL_GPIO_TogglePin( GPIOC, LL_GPIO_PIN_13 );
 
@@ -134,7 +181,10 @@ int main(void)
 	}
 
 	// Event 1000ms:
+	//
 	if ( G.time1000.flag() ) {
+
+
 
 		G.time1000.clear();
 	}

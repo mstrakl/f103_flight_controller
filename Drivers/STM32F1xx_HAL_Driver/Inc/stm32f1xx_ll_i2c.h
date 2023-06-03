@@ -1614,6 +1614,7 @@ __STATIC_INLINE uint32_t LL_I2C_IsEnabledBitPOS(I2C_TypeDef *I2Cx)
   return (READ_BIT(I2Cx->CR1, I2C_CR1_POS) == (I2C_CR1_POS));
 }
 
+
 /**
   * @brief  Indicate the value of transfer direction.
   * @note   RESET: Bus is in read transfer (peripheral point of view).

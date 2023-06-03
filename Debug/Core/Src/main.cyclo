@@ -3,6 +3,10 @@ core_cm3.h:1499:26:uint32_t __NVIC_GetPriorityGrouping()	1
 core_cm3.h:1639:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	2
 core_cm3.h:1686:26:uint32_t NVIC_EncodePriority(uint32_t, uint32_t, uint32_t)	2
 core_cm3.h:1834:26:uint32_t SysTick_Config(uint32_t)	2
+stm32f1xx_ll_i2c.h:1310:26:uint32_t LL_I2C_IsActiveFlag_BUSY(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1382:26:uint32_t LL_I2C_IsActiveFlag_MSL(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1566:22:void LL_I2C_GenerateStartCondition(I2C_TypeDef*)	1
+stm32f1xx_ll_i2c.h:1740:22:void LL_I2C_TransmitData8(I2C_TypeDef*, uint8_t)	1
 stm32f1xx_ll_rcc.h:772:22:void LL_RCC_HSE_Enable()	1
 stm32f1xx_ll_rcc.h:792:26:uint32_t LL_RCC_HSE_IsReady()	1
 stm32f1xx_ll_rcc.h:1012:22:void LL_RCC_SetSysClkSource(uint32_t)	1
@@ -28,11 +32,11 @@ globals.h:51:8:void events::Event16::tick()	2
 globals.h:59:8:void events::Event16::clear()	1
 globals.h:64:14:const bool events::Event16::flag()	1
 globals.h:78:7:Globals::Globals()	1
-main.cpp:68:5:int main()	4
-main.cpp:155:6:void SystemClock_Config()	5
-main.cpp:192:6:void IncrementSystemTick_Callback()	1
-main.cpp:209:6:void Error_Handler()	1
+main.cpp:68:5:int main()	8
+main.cpp:205:6:void SystemClock_Config()	5
+main.cpp:242:6:void IncrementSystemTick_Callback()	1
+main.cpp:259:6:void Error_Handler()	1
 globals.h:78:7:Globals::~Globals()	1
-main.cpp:218:1:void __static_initialization_and_destruction_0(int, int)	7
-main.cpp:218:1:cpp)	1
-main.cpp:218:1:cpp)	1
+main.cpp:268:1:void __static_initialization_and_destruction_0(int, int)	7
+main.cpp:268:1:cpp)	1
+main.cpp:268:1:cpp)	1
