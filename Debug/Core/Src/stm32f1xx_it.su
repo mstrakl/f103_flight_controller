@@ -1,0 +1,23 @@
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1785:26:uint32_t LL_USART_IsActiveFlag_PE(const USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1807:26:uint32_t LL_USART_IsActiveFlag_NE(const USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1818:26:uint32_t LL_USART_IsActiveFlag_ORE(const USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1840:26:uint32_t LL_USART_IsActiveFlag_RXNE(const USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1875:26:uint32_t LL_USART_IsActiveFlag_LBD(const USART_TypeDef*)	16	static
+../Core/Inc/globals.h:13:7:Globals::Globals()	16	static
+../Core/Src/stm32f1xx_it.cpp:73:6:void NMI_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:88:6:void HardFault_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:103:6:void MemManage_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:118:6:void BusFault_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:133:6:void UsageFault_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:148:6:void SVC_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:161:6:void DebugMon_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:174:6:void PendSV_Handler()	4	static
+../Core/Src/stm32f1xx_it.cpp:187:6:void SysTick_Handler()	8	static
+../Core/Src/stm32f1xx_it.cpp:208:6:void DMA1_Channel2_IRQHandler()	4	static
+../Core/Src/stm32f1xx_it.cpp:222:6:void DMA1_Channel5_IRQHandler()	4	static
+../Core/Src/stm32f1xx_it.cpp:236:6:void I2C1_EV_IRQHandler()	4	static
+../Core/Src/stm32f1xx_it.cpp:250:6:void USART1_IRQHandler()	8	static
+../Core/Inc/globals.h:13:7:Globals::~Globals()	16	static
+../Core/Src/stm32f1xx_it.cpp:271:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/stm32f1xx_it.cpp:271:1:cpp)	8	static
+../Core/Src/stm32f1xx_it.cpp:271:1:cpp)	8	static

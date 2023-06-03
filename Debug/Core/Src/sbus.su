@@ -1,0 +1,8 @@
+../Core/Inc/sbus.h:24:9:void def::def::Channel::operator=(const unsigned int&)	16	static
+../Core/Src/sbus.cpp:12:1:def::Sbus::Sbus()	24	static
+../Core/Src/sbus.cpp:18:1:def::Sbus::~Sbus()	16	static
+../Core/Src/sbus.cpp:18:1:virtual def::Sbus::~Sbus()	16	static
+../Core/Src/sbus.cpp:23:20:const unsigned int def::Sbus::sbus2pwm(const unsigned int&)	24	static
+../Core/Src/sbus.cpp:34:12:const bool def::Sbus::decodeChannels()	160	static
+../Core/Src/sbus.cpp:71:6:void def::Sbus::readSbusFrame(const unsigned char&)	16	static
+../Core/Src/sbus.cpp:103:6:void def::Sbus::incrementUsartError()	16	static

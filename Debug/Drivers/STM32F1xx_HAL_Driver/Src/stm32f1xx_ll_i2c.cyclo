@@ -1,0 +1,11 @@
+stm32f1xx_ll_i2c.h:348:22:LL_I2C_Enable	1
+stm32f1xx_ll_i2c.h:359:22:LL_I2C_Disable	1
+stm32f1xx_ll_i2c.h:536:22:LL_I2C_SetOwnAddress1	1
+stm32f1xx_ll_i2c.h:728:22:LL_I2C_ConfigSpeed	7
+stm32f1xx_ll_i2c.h:777:22:LL_I2C_SetMode	1
+stm32f1xx_ll_i2c.h:1553:22:LL_I2C_AcknowledgeNextData	1
+stm32f1xx_ll_bus.h:636:22:LL_APB1_GRP1_ForceReset	1
+stm32f1xx_ll_bus.h:699:22:LL_APB1_GRP1_ReleaseReset	1
+stm32f1xx_ll_i2c.c:87:10:LL_I2C_DeInit	3
+stm32f1xx_ll_i2c.c:129:10:LL_I2C_Init	1
+stm32f1xx_ll_i2c.c:189:6:LL_I2C_StructInit	1

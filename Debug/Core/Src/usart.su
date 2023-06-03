@@ -1,0 +1,25 @@
+../Drivers/CMSIS/Include/core_cm3.h:1499:26:uint32_t __NVIC_GetPriorityGrouping()	4	static
+../Drivers/CMSIS/Include/core_cm3.h:1511:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+../Drivers/CMSIS/Include/core_cm3.h:1639:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	16	static
+../Drivers/CMSIS/Include/core_cm3.h:1686:26:uint32_t NVIC_EncodePriority(uint32_t, uint32_t, uint32_t)	40	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:552:22:void LL_DMA_SetDataTransferDirection(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:601:22:void LL_DMA_SetMode(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:646:22:void LL_DMA_SetPeriphIncMode(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:691:22:void LL_DMA_SetMemoryIncMode(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:737:22:void LL_DMA_SetPeriphSize(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:784:22:void LL_DMA_SetMemorySize(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:832:22:void LL_DMA_SetChannelPriorityLevel(DMA_TypeDef*, uint32_t, uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:445:22:void LL_APB1_GRP1_EnableClock(uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:761:22:void LL_APB2_GRP1_EnableClock(uint32_t)	24	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:412:22:void LL_USART_Enable(USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:1527:22:void LL_USART_ConfigAsyncMode(USART_TypeDef*)	16	static
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:2451:25:uint8_t LL_USART_ReceiveData8(const USART_TypeDef*)	16	static
+../Core/Inc/globals.h:13:7:Globals::Globals()	16	static
+../Core/Src/usart.cpp:31:6:void MX_USART1_UART_Init()	56	static
+../Core/Src/usart.cpp:101:6:void MX_USART3_UART_Init()	56	static
+../Core/Src/usart.cpp:169:6:void USART1_ReadSbus_Callback()	16	static
+../Core/Src/usart.cpp:174:6:void USART1_Error_Callback()	8	static
+../Core/Inc/globals.h:13:7:Globals::~Globals()	16	static
+../Core/Src/usart.cpp:177:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/usart.cpp:177:1:cpp)	8	static
+../Core/Src/usart.cpp:177:1:cpp)	8	static
